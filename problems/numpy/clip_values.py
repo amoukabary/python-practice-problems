@@ -12,9 +12,15 @@ def clip_values(x, min_val=None, max_val=None):
              to (min_val, max-val)
     """
 
-    # YOUR CODE HERE
-    # Replace None with an appropriate return value
-    return None
+    y = np.copy(x)
+
+    if min_val:
+        y = np.maximum(min_val, y)
+
+    if max_val:
+        y = np.minimum(max_val, y)
+
+    return y
 
 
 #############################################################
